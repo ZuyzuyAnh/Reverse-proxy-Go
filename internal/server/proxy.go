@@ -112,7 +112,6 @@ func (p *Proxy) RateLimit(r *http.Request) error {
 	p.clients[ip].lastSeen = time.Now()
 
 	if !p.clients[ip].limiter.Allow() {
-		p.mu.Unlock()
 		return errorRateLimit
 	}
 
