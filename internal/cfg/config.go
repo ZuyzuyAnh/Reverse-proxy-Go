@@ -18,8 +18,8 @@ type Configuration struct {
 		Host string
 		Port string
 	}
-
-	Resources []resource
+	ClientDuration int
+	Resources      []resource
 }
 
 var Config *Configuration
